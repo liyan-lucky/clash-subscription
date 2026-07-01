@@ -1,0 +1,29 @@
+name: Security Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  secret-pattern-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for obvious private subscription patterns
+        run: |
+          set -e
+          if grep -RInE '(https?://[^ ]*(subscribe|subscription|token=|passwd=|password=|apikey=|api_key=)|ss://|vmess://|vless://|trojan://)' . \
+            --exclude-dir=.git \
+            --exclude='security-check.yml' \
+            --exclude='README.md' \
+            --exclude='usage.md' \
+            --exclude='config-template.yaml'; then
+            echo "Potential sensitive proxy/subscription information found. Please review before publishing."
+            exit 1
+          fi
