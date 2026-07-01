@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Runtime/cache
+.cache/
+tmp/
+temp/
+
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# Private Clash subscription/config files
+subscriptions/*.yaml
+subscriptions/*.yml
+subscriptions/*.txt
+subscriptions/*.list
+subscriptions/*.conf
+private/
+secrets/
+
+# Keep placeholder files
+!subscriptions/.gitkeep
