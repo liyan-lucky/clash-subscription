@@ -1,0 +1,7 @@
+# Rules template
+
+rules:
+  - DOMAIN-SUFFIX,example.com,PROXY
+  - DOMAIN-SUFFIX,example.cn,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
