@@ -1,0 +1,14 @@
+# Clash rule provider template
+# This is a sanitized example.
+
+rule-providers:
+  example-direct:
+    type: http
+    behavior: domain
+    url: "https://example.com/direct.list"
+    path: ./ruleset/example-direct.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,example-direct,DIRECT
+  - MATCH,PROXY
