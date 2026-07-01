@@ -1,0 +1,4 @@
+# Custom provider example
+# Add safe, public rules only.
+
+# DOMAIN-SUFFIX,example.org,PROXY
