@@ -1,0 +1,4 @@
+# Placeholder only
+# Do not put real subscription URLs in this public repository.
+# Example placeholder:
+# YOUR_SUBSCRIPTION_URL
