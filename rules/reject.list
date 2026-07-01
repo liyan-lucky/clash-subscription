@@ -1,0 +1,4 @@
+# Reject/block examples
+# Add public/safe domain rules only.
+# Example:
+# DOMAIN-SUFFIX,example-ads.com,REJECT
