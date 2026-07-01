@@ -1,0 +1,17 @@
+name: Backup Branch Reminder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backup-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show backup branch instructions
+        run: |
+          echo "This workflow is a reminder only."
+          echo "Recommended local backup command:"
+          echo "git checkout main"
+          echo "git pull origin main"
+          echo "git branch -f backup main"
+          echo "git push origin backup --force-with-lease"
