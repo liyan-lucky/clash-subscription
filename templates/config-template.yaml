@@ -1,0 +1,30 @@
+# Clash configuration template
+# Replace all placeholder values before local use.
+# Do not commit real server addresses, passwords, tokens, or subscription links.
+
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+  - name: example-node
+    type: ss
+    server: example.com
+    port: 8388
+    cipher: aes-256-gcm
+    password: CHANGE_ME
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - example-node
+      - DIRECT
+
+rules:
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
