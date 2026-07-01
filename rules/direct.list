@@ -1,0 +1,4 @@
+# Direct connection examples
+# Add public/safe domain rules only.
+# Example:
+# DOMAIN-SUFFIX,example.cn,DIRECT
