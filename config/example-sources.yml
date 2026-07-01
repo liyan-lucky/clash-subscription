@@ -1,0 +1,13 @@
+# Example source list
+# Put real values in GitHub Secrets or local environment variables only.
+
+sources:
+  - name: source_one
+    env: SOURCE_ONE
+    enabled: false
+  - name: source_two
+    env: SOURCE_TWO
+    enabled: false
+
+output_file: subscriptions/generated.yml
+metadata_file: subscriptions/generated-meta.json
