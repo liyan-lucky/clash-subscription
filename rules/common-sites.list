@@ -1,0 +1,6 @@
+# Common site rule examples
+# These examples are public placeholders.
+
+# DOMAIN-SUFFIX,github.com,PROXY
+# DOMAIN-SUFFIX,google.com,PROXY
+# DOMAIN-SUFFIX,baidu.com,DIRECT
