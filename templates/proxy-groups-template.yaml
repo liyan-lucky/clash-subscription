@@ -1,0 +1,16 @@
+# Proxy groups template
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - Auto
+      - DIRECT
+
+  - name: Auto
+    type: url-test
+    proxies:
+      - placeholder-node-1
+      - placeholder-node-2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
